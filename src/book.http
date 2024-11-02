@@ -1,0 +1,34 @@
+@server = http://localhost:3000
+
+#게시글 조회
+GET {{server}}/book
+
+###게시글 생성
+POST {{server}}/book
+Content-Type: application/json
+
+{
+    "id": "2",
+    "title": "가짜 노동",
+    "writer": "데니스 뇌르마르크",
+    "isAvailable": true,
+    "createdDt": "2024-11-02T06:47:39Z"
+}
+
+### 특정 게시글 조회
+GET {{server}}/book/<게시글ID>
+
+### 게시글 삭제
+DELETE {{server}}/book/<게시글ID>
+
+### 게시글 수정
+PUT {{server}}/book/<게시글ID>
+Content-Type: application/json
+
+{
+    "id": "2",
+    "title": "라플라스의 마녀",
+    "writer": "히가시노 게이고",
+    "isAvailable": true,
+    "createdDt": "2024-11-02T06:47:39Z"
+}
